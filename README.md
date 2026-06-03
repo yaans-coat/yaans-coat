@@ -1,5 +1,7 @@
 # Hi 👋 My name is Aayan
 
+====================================================================================================================================
+
 <a href="https://github.com/yaans-coat">
   <img src="https://komarev.com/ghpvc/?username=yaans-coat" alt="page views" />
 </a>
@@ -15,85 +17,78 @@
 ---
 
 <a href="https://github.com/yaans-coat" align="right">
-  <img src="https://github-readme-stats.vercel.app/api?username=yaans-coat&show_icons=true&theme=github_dark&hide_border=true" alt="GitHub stats" align="right"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=yaans-coat&show_icons=true&theme=github_dark&hide_border=true" alt="GitHub Stats" align="right"/>
 </a>
 
-I’m Aayan, a student developer from Australia 🇦🇺 who enjoys building, breaking, and improving software.
+## 🕒 Current Time (Sydney)
 
-Right now I’m part of the **BetterSEQTA+ community**, where I help test beta releases, give feedback on features, and work on community extensions. It’s my first real step into contributing to a live software project used by real users, and I’m learning a lot through it.
-
-Outside of that, I spend my time experimenting with web development, AI tools, and small software projects just to see what I can build.
 
 ---
 
-* 🚀 Contributor to BetterSEQTA+
-* 🔌 Working on community extensions & beta testing
-* 🌐 Portfolio: https://yaans-coat.netlify.app/
-* 🌱 Learning JavaScript, TypeScript, SCSS, and Vite
-* 🤖 Exploring AI, LLMs, and modern tooling
-* 💡 Building small projects to improve my skills
+## 💬 Typing Intro
+
+![Typing SVG](https://readme-stats-github.pages.dev/api/typing?lines=hiya%20there!&theme=dark&color=white&particleColor=%23&background=white)
 
 ---
 
-## Skills
+## 🚀 About Me
 
-<p align="center">
+Hi, I’m Aayan 🇦🇺 — a student developer who enjoys building, experimenting, and figuring out how software actually works under the hood.
 
-<a href="https://www.python.org/">
-<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/python-colored.svg" width="36" height="36" />
-</a>
+I started with basic Python and HTML, and slowly moved into modern web development. Right now I’m learning JavaScript, TypeScript, SCSS, and Vite while building small projects that help me improve through practice instead of just tutorials.
 
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
-<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" width="36" height="36" />
-</a>
+Recently, I joined the BetterSEQTA+ community where I help test beta releases, give feedback on features, and work on community extensions. It’s my first real experience contributing to a live software project used by real users, and it’s teaching me how collaborative development actually works.
 
-<a href="https://www.typescriptlang.org/">
-<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/typescript-colored.svg" width="36" height="36" />
-</a>
+Outside of that, I like exploring AI tools, building small apps, and understanding how different systems connect — from frontend interfaces to backend logic and everything in between.
 
-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML">
-<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" width="36" height="36" />
-</a>
-
-<a href="https://developer.mozilla.org/en-US/docs/Web/CSS">
-<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg" width="36" height="36" />
-</a>
-
-<a href="https://git-scm.com/">
-<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/git-colored.svg" width="36" height="36" />
-</a>
-
-<a href="https://vitejs.dev/">
-<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/vite-colored.svg" width="36" height="36" />
-</a>
-
-</p>
+I’m still early in my journey, but I enjoy improving step by step and turning ideas into real projects.
 
 ---
 
-## Current Focus
+## 🔥 What I’m Doing Right Now
 
-* BetterSEQTA+ community contributions
-* JavaScript fundamentals
-* Browser extensions
-* UI improvements & small tools
-* Learning how real-world web apps are structured
-
----
-
-## Fun stuff
-
-* I like figuring out how apps are built by reverse-engineering ideas
-* I learn best by building small real projects instead of just tutorials
-* I’m slowly getting into open-source development
-* I break things, then learn how to fix them 😭
+- 🚀 Contributing to BetterSEQTA+
+- 🔌 Testing beta features & community extensions
+- 🌱 Learning JavaScript, TypeScript, SCSS, Vite
+- 🤖 Exploring AI tools & local models
+- 💡 Building small projects to learn by doing
+- 🎯 Working toward full-stack development
 
 ---
 
-## Portfolio
+## 📊 GitHub Stats
+
+![yaans-coat's GitHub Stats](https://readme-stats-github.pages.dev/api?username=yaans-coat&theme=dark)
+
+---
+
+## 💻 Skills
+
+- Python
+- HTML
+- CSS
+- JavaScript (learning)
+- TypeScript (learning)
+- Git & GitHub
+- Vite
+- Linux basics
+
+---
+
+## 🌐 Portfolio
 
 👉 https://yaans-coat.netlify.app/
 
 ---
 
-> “Build, break, learn, repeat.”
+## 💬 Fun Facts
+
+- I learn fastest by building real things instead of reading theory
+- I enjoy breaking things and figuring out how to fix them
+- I like reverse-engineering how apps are made
+- I’m slowly getting into open-source development
+- Every project I make teaches me something new
+
+---
+
+> “Build. Break. Learn. Repeat.”
