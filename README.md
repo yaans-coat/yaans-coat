@@ -1,7 +1,5 @@
 # Hi 👋 My name is Aayan
 
-====================================================================================================================================
-
 <a href="https://github.com/yaans-coat">
   <img src="https://komarev.com/ghpvc/?username=yaans-coat" alt="page views" />
 </a>
