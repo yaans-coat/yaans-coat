@@ -3,7 +3,7 @@
 ======================================================================================================================================
 
 <a href="https://github.com/yaans-coat">
-  <img src="https://komarev.com/ghpvc/?username=yaans-coat" alt="page views" />
+  <img src="https://komarev.com/ghpvc/?username=yaans-coat" alt="Profile Views" />
 </a>
 
 <a href="https://github.com/yaans-coat">
@@ -14,20 +14,24 @@
   <img src="https://github-readme-stats.vercel.app/api?username=yaans-coat&show_icons=true&theme=github_dark&hide_border=true" alt="GitHub Stats" align="right"/>
 </a>
 
-Student developer from Australia 🇦🇺
+### Student Developer • BetterSEQTA+ Contributor • AI Enthusiast
 
-Currently contributing to BetterSEQTA+ through beta testing, feature feedback, and community extensions. I enjoy experimenting with AI, building software projects, and learning modern web technologies.
+I'm Aayan, a student developer from Australia with a strong interest in open-source software, artificial intelligence, and modern web technologies.
+
+I recently joined the BetterSEQTA+ team, where I help test beta releases, provide feature feedback, and work on community extensions. Outside of that, I spend most of my time experimenting with AI projects, building software ideas, and learning new technologies.
+
+I enjoy figuring out how things work, turning ideas into projects, and contributing to tools that real people use every day.
 
 * 🚀 Contributing to BetterSEQTA+
-* 🔌 Working on community extensions
+* 🔌 Working on community extensions and testing beta releases
 * 🌱 Learning JavaScript, TypeScript, SCSS, and Vite
-* 🤖 Interested in AI, LLMs, and local inference
-* 🛠️ Building personal software and open-source projects
-* 🎯 Goal: Become a full-stack developer and open-source contributor
+* 🤖 Exploring AI, local LLMs, and machine learning
+* 💡 Building personal software projects and experiments
+* 🎯 Working toward becoming a full-stack developer
 
 <br>
 
-## Skills
+## Skills & Technologies
 
 <p align="center">
 
@@ -51,16 +55,20 @@ Currently contributing to BetterSEQTA+ through beta testing, feature feedback, a
 <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg" width="36" height="36" alt="CSS3" />
 </a>
 
+<a href="https://sass-lang.com/" target="_blank">
+<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/sass-colored.svg" width="36" height="36" alt="SCSS" />
+</a>
+
 <a href="https://git-scm.com/" target="_blank">
 <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/git-colored.svg" width="36" height="36" alt="Git" />
 </a>
 
-<a href="https://code.visualstudio.com/" target="_blank">
-<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/visualstudiocode.svg" width="36" height="36" alt="VS Code" />
-</a>
-
 <a href="https://vitejs.dev/" target="_blank">
 <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/vite-colored.svg" width="36" height="36" alt="Vite" />
+</a>
+
+<a href="https://code.visualstudio.com/" target="_blank">
+<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/visualstudiocode.svg" width="36" height="36" alt="VS Code" />
 </a>
 
 <a href="https://www.linux.org/" target="_blank">
@@ -69,29 +77,32 @@ Currently contributing to BetterSEQTA+ through beta testing, feature feedback, a
 
 </p>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/yaans-coat/yaans-coat/output/github-contribution-grid-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/yaans-coat/yaans-coat/output/github-snake.svg" />
-  <img alt="github-snake" src="https://raw.githubusercontent.com/yaans-coat/yaans-coat/output/github-snake.svg" />
-</picture>
-
 ## Current Focus
 
-```txt
-JavaScript      ███████░░░
-TypeScript      ███░░░░░░░
-SCSS            ██░░░░░░░░
-Vite            ██░░░░░░░░
-Open Source     ████████░░
-AI Development  ██████░░░░
+```text
+🚀 BetterSEQTA+ Community Contributions
+🌐 Modern Web Development
+⚡ JavaScript & TypeScript
+🎨 SCSS & UI Design
+🤖 Artificial Intelligence
+🔓 Open Source Software
 ```
 
-## Socials
+## Fun Facts
+
+* Started contributing to BetterSEQTA+ before becoming an experienced web developer.
+* Love experimenting with AI models and software ideas.
+* Enjoy learning by building real projects instead of only following tutorials.
+* Always looking for something new to create, improve, or automate.
+
+## Connect
 
 <p align="left">
 <a href="https://github.com/yaans-coat">
 <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" width="32" height="32" />
 </a>
 </p>
+
+> "Learn, build, improve, repeat."
 
 > "Always learning. Always building."
