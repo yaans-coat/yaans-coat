@@ -3,156 +3,444 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>yaansyaans •ᴗ•</title>
-    <link rel="icon" type="image/png" href="icon.png">
+    <title>yaansyaans ;)</title>
+    <!-- Favicon / Site Icon -->
+    <link rel="icon" type="image/png" href="./icon.png">
+    
+    <!-- Nunito Font Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
     <style>
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: 'Courier New', Courier, monospace;
+            font-family: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
 
         body {
-            background-color: #000;
-            color: #fff;
-            min-height: 100vh;
+            background-color: #010204;
+            color: #c9d1d9;
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
+            min-height: 100vh;
+            padding: 20px;
+            overflow-x: hidden;
             position: relative;
         }
 
-        #canvas {
-            position: absolute;
+        /* High-Density Realistic 3D Perspective Ocean Canvas */
+        #canvas-bg {
+            position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+            pointer-events: none;
         }
 
-        .card {
+        /* Glassmorphism Container */
+        .glass-card {
             position: relative;
-            z-index: 2;
-            background: #000;
-            border: 2px solid #fff;
-            padding: 2.5rem 2rem;
-            width: 90%;
-            max-width: 440px;
+            z-index: 1;
+            background: rgba(10, 14, 20, 0.65);
+            backdrop-filter: blur(24px) saturate(190%);
+            -webkit-backdrop-filter: blur(24px) saturate(190%);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            width: 100%;
+            max-width: 500px;
+            padding: 28px 24px;
             text-align: center;
-            box-shadow: 6px 6px 0px #fff;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85);
         }
 
-        .profile-icon {
-            width: 88px;
-            height: 88px;
-            border-radius: 0;
-            border: 2px solid #fff;
-            margin-bottom: 1rem;
-            object-fit: cover;
-        }
-
-        .header-group {
-            margin-bottom: 1rem;
-        }
-
-        h1 {
-            font-size: 1.8rem;
-            letter-spacing: 1px;
-            display: inline-block;
-        }
-
-        .pronouns {
-            display: inline-block;
-            font-size: 0.8rem;
-            color: #888;
-            border: 1px solid #888;
-            padding: 2px 6px;
-            margin-left: 6px;
-            vertical-align: middle;
-        }
-
-        p.bio {
-            color: #ddd;
-            font-size: 0.88rem;
-            line-height: 1.5;
-            margin-bottom: 1.8rem;
-            text-align: left;
-            border-left: 2px solid #fff;
-            padding-left: 10px;
-        }
-
-        .links {
+        /* Navigation Bar */
+        .nav-bar {
             display: flex;
-            flex-direction: column;
-            gap: 0.9rem;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 24px;
         }
 
-        .link-btn {
-            color: #fff;
-            text-decoration: none;
-            padding: 0.75rem 1rem;
-            border: 2px solid #fff;
-            background: #000;
-            font-size: 0.9rem;
-            font-weight: bold;
+        .nav-btn {
+            background: none;
+            border: none;
+            color: #8b949e;
+            cursor: pointer;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.2s ease;
+        }
+
+        .nav-btn svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+            display: block;
+        }
+
+        .nav-btn:hover {
+            color: #f0f6fc;
+        }
+
+        .nav-btn.active {
+            color: #58a6ff;
+        }
+
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        .avatar {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            border: 2px solid rgba(88, 166, 255, 0.4);
+            margin-bottom: 12px;
+            box-shadow: 0 0 25px rgba(88, 166, 255, 0.15);
+        }
+
+        /* Header Container for Name & Tenor GIF Embed */
+        .header-title-container {
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
-            box-shadow: 4px 4px 0px #fff;
-            transition: all 0.1s ease;
+            margin-bottom: 4px;
         }
 
-        .link-btn:hover {
-            background: #fff;
-            color: #000;
-            box-shadow: 2px 2px 0px #fff;
-            transform: translate(2px, 2px);
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: #f0f6fc;
+            letter-spacing: -0.5px;
         }
 
-        .link-btn:hover svg {
-            fill: #000;
+        .tenor-embed-wrapper {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: inline-block;
+            vertical-align: middle;
+            flex-shrink: 0;
         }
 
-        .link-btn svg {
-            fill: #fff;
-            width: 18px;
-            height: 18px;
+        p.username {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #8b949e;
+            margin-bottom: 16px;
+        }
+
+        p.bio {
+            font-size: 0.95rem;
+            font-weight: 400;
+            line-height: 1.5;
+            margin-bottom: 24px;
+            color: #c9d1d9;
+        }
+
+        /* Tech Stack */
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .tech-icon {
+            width: 32px;
+            height: 32px;
+            flex-shrink: 0;
+        }
+
+        /* Clean Natural-Sized Icon Links */
+        .asset-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .asset-btn {
+            display: inline-block;
+            color: #c9d1d9;
+            text-decoration: none;
+            line-height: 0;
+        }
+
+        .asset-btn img {
+            width: 24px;
+            height: 24px;
+            display: block;
+            flex-shrink: 0;
+        }
+
+        /* Music & Extras Cards */
+        .quotes-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            text-align: left;
+        }
+
+        .quote-card {
+            background: rgba(0, 0, 0, 0.35);
+            border-left: 3px solid #58a6ff;
+            padding: 12px 16px;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            font-size: 0.9rem;
+            color: #8b949e;
+        }
+
+        .music-card {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: rgba(0, 0, 0, 0.35);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 12px 16px;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            text-align: left;
+        }
+
+        .music-card img.spotify-icon {
+            width: 28px;
+            height: 28px;
+            flex-shrink: 0;
+        }
+
+        .music-info h4 {
+            color: #f0f6fc;
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 2px;
+        }
+
+        .music-info p {
+            color: #8b949e;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        .section-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #f0f6fc;
+            margin-bottom: 12px;
+            text-align: left;
         }
     </style>
 </head>
 <body>
-    <canvas id="canvas"></canvas>
 
-    <div class="card">
-        <img src="icon.png" alt="Profile Icon" class="profile-icon">
-        <div class="header-group">
-            <h1>yaans</h1>
-            <span class="pronouns">he/him</span>
-        </div>
-        
-        <p class="bio">hiya! i'm yaans, i like tinkering with Linux and some random machines. I also like playing around with AI tools and other things •ᴗ•.</p>
-        
-        <div class="links">
-            <a href="https://github.com/yaans-coat" target="_blank" class="link-btn">
+    <!-- Canvas for 3D Perspective Realistic Binary Ocean Surface -->
+    <canvas id="canvas-bg"></canvas>
+
+    <div class="glass-card">
+        <!-- SVG Page Selector -->
+        <nav class="nav-bar">
+            <button class="nav-btn active" onclick="switchPage('home', this)" title="Home">
                 <svg viewBox="0 0 24 24">
-                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
                 </svg>
-                CHECK OUT MY GITHUB
-            </a>
+            </button>
+            <button class="nav-btn" onclick="switchPage('extras', this)" title="Xtras">
+                <svg viewBox="0 0 24 24">
+                    <path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm3-3c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Home Page -->
+        <div id="home" class="page active">
+            <img class="avatar" src="https://github.com/yaans-coat.png" alt="yaans avatar">
             
-            <a href="https://kernel.org" target="_blank" class="link-btn">
-                <svg viewBox="0 0 24 24">
-                    <path d="M4 1h16v2H4V1zm-2 4h20v14H2V5zm4 3v8h2V8H6zm4 0v8h8V8h-8zm2 2h4v4h-4v-4zM2 21h20v2H2v-2z"/>
-                </svg>
-                POWERED BY LINUX
-            </a>
+            <div class="header-title-container">
+                <h1>yaans</h1>
+                <!-- Tenor GIF Embed -->
+                <div class="tenor-embed-wrapper">
+                    <div class="tenor-gif-embed" data-postid="15680289644544200178" data-share-method="host" data-aspect-ratio="1" data-width="100%">
+                        <a href="https://tenor.com/view/konata-lucky-star-thinking-loading-anime-gif-15680289644544200178">Konata Lucky Star GIF</a>
+                    </div>
+                    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+                </div>
+            </div>
+            
+            <p class="username">@yaans-coat</p>
+            
+            <p class="bio">
+                hiya! i'm yaans, i like tinkering with Linux and making tools to bypass internet c*ncorship. I also play around some random machines. I also like playing around with AI tools and other things •ᴗ•.
+            </p>
+
+            <!-- Tech Stack Logos -->
+            <div class="tech-stack">
+                <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5" title="HTML5" />
+                <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3" title="CSS3" />
+                <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg" alt="SCSS" title="SCSS" />
+                <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript" />
+                <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="TypeScript" title="TypeScript" />
+                <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" alt="Linux" title="Linux" />
+                <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linuxmint/linuxmint-original.svg" alt="Linux Mint" title="Linux Mint" />
+                <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-plain.svg" alt="VS Code" title="VS Code" />
+            </div>
+
+            <!-- Icon-Only Directory Links -->
+            <div class="asset-links">
+                <a href="https://github.com/yaans-coat" target="_blank" class="asset-btn" title="GitHub">
+                    <img src="./assets/github.png" alt="GitHub">
+                </a>
+                <a href="https://discord.gg/5pRab68f2H" target="_blank" class="asset-btn" title="Discord">
+                    <img src="./assets/discord.png" alt="Discord">
+                </a>
+                <a href="https://ublockorigin.com/" target="_blank" class="asset-btn" title="uBlock Origin">
+                    <img src="./assets/ublockorigin.png" alt="uBlock Origin">
+                </a>
+                <a href="https://code.visualstudio.com/" target="_blank" class="asset-btn" title="VSCode">
+                    <img src="./assets/vscode.png" alt="VS Code">
+                </a>
+                <span class="asset-btn" title="Arch Linux">
+                    <img src="./assets/icons8-arch-linux-24.png" alt="Arch">
+                </span>
+                <span class="asset-btn" title="Linux">
+                    <img src="./assets/linux.png" alt="Linux">
+                </span>
+            </div>
+        </div>
+
+        <!-- Extras Page -->
+        <div id="extras" class="page">
+            <h2 class="section-title">Music</h2>
+            
+            <div class="music-card">
+                <img class="spotify-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spotify/spotify-original.svg" alt="Spotify" />
+                <div class="music-info">
+                    <h4>Raindance</h4>
+                    <p>Dave (ft. Tems)</p>
+                </div>
+            </div>
+
+            <div class="music-card">
+                <img class="spotify-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spotify/spotify-original.svg" alt="Spotify" />
+                <div class="music-info">
+                    <h4>White Keys</h4>
+                    <p>Dominic Fike</p>
+                </div>
+            </div>
+
+            <h2 class="section-title" style="margin-top: 20px;">Quotes</h2>
+            <div class="quotes-container">
+                <div class="quote-card">
+                    "hate linewize but gotta cope with it."
+                </div>
+                <div class="quote-card">
+                    "love raindance, best song"
+                </div>
+            </div>
         </div>
     </div>
 
-    <script src="app.js"></script>
+    <script>
+        /* Page Switching Logic */
+        function switchPage(pageId, btn) {
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.querySelectorAll('.nav-btn').forEach(button => {
+                button.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+            btn.classList.add('active');
+        }
+
+        /* 3D Dynamic Surface Wave Equation Simulation */
+        const canvas = document.getElementById('canvas-bg');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        let time = 0;
+
+        function getWaveHeight(x, z, t) {
+            const w1 = Math.sin(x * 0.008 + z * 0.005 + t * 1.2) * 18;
+            const w2 = Math.cos(x * 0.012 - z * 0.015 + t * 1.8) * 10;
+            const w3 = Math.sin(x * 0.003 - z * 0.002 + t * 0.6) * 32;
+            const w4 = Math.sin(Math.sqrt(x * x + z * z) * 0.01 - t * 1.5) * 6;
+            return w1 + w2 + w3 + w4;
+        }
+
+        function draw3DOcean() {
+            ctx.fillStyle = '#010204';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            time += 0.02;
+
+            const gridCols = 110;
+            const gridRows = 55;
+            const horizonY = canvas.height * 0.38;
+
+            for (let r = gridRows; r >= 0; r--) {
+                const depthRatio = r / gridRows;
+                
+                const perspectiveScale = Math.pow(depthRatio, 1.8);
+                const screenY = horizonY + perspectiveScale * (canvas.height - horizonY);
+                const fontSize = Math.max(3, perspectiveScale * 9);
+                
+                ctx.font = `${fontSize}px "Nunito", monospace`;
+
+                const rowWidth = canvas.width * (0.3 + perspectiveScale * 1.2);
+                const rowLeft = (canvas.width - rowWidth) / 2;
+                const colSpacing = rowWidth / gridCols;
+
+                for (let c = 0; c <= gridCols; c++) {
+                    const worldX = (c - gridCols / 2) * (15 / (perspectiveScale + 0.1));
+                    const worldZ = (1 - depthRatio) * 800;
+
+                    const heightOffset = getWaveHeight(worldX, worldZ, time);
+                    const projectedY = screenY - heightOffset * perspectiveScale * 0.8;
+                    const projectedX = rowLeft + c * colSpacing;
+
+                    const heightSlope = getWaveHeight(worldX + 2, worldZ, time) - heightOffset;
+                    
+                    if (heightSlope > 4) {
+                        ctx.fillStyle = `rgba(235, 245, 255, ${Math.min(1, perspectiveScale * 1.1)})`;
+                    } else if (heightOffset > 8) {
+                        ctx.fillStyle = `rgba(88, 166, 255, ${perspectiveScale * 0.95})`;
+                    } else {
+                        const deepOpacity = Math.max(0.04, perspectiveScale * 0.5);
+                        ctx.fillStyle = `rgba(22, 90, 190, ${deepOpacity})`;
+                    }
+
+                    const char = (c + r + Math.floor(time * 5)) % 2 === 0 ? '1' : '0';
+                    ctx.fillText(char, projectedX, projectedY);
+                }
+            }
+
+            requestAnimationFrame(draw3DOcean);
+        }
+
+        draw3DOcean();
+    </script>
 </body>
 </html>
