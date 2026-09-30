@@ -1,6 +1,13 @@
-# hiya!
+<h1 align="center">hiya! i'm yaans. 👋
+  <br>
+  <sup><sub align="center">professional idiot</sub></sup>
+</h1>
 
-I'm yaans, yaans-coat is my full nickname but yaans works fine. I make tools for internet related things or sometimes I'm just messing around. I create under the No C*ncorship label which is The Axis Network's promise. Proxies, Block Trackers, Ad blockers, I make it all.
+<br>
+I'm a 13y/o full stack vibe-coder and developer who's focus is on bypassing internet censorship and making cool tools.
+
+# techstack
+![](https://skillicons.dev/icons?i=html,css,javascript,typescript,bun,npm,linux,redhat,ubuntu,arch,debian,vite,vscode,vscodium,express,rust,c,cpp,cs,electron,docker,discord,cmake,bash,&theme=light)
 
 # projects
 
