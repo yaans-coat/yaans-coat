@@ -7,7 +7,7 @@
 I'm a 13y/o full stack vibe-coder and developer who's focus is on bypassing internet censorship and making cool tools.
 
 # techstack
-![](https://skillicons.dev/icons?i=html,css,javascript,typescript,bun,npm,linux,redhat,ubuntu,arch,debian,vite,vscode,vscodium,express,rust,c,cpp,cs,electron,docker,discord,cmake,bash,&theme=light)
+![](https://skillicons.dev/icons?i=html,css,javascript,typescript,bun,npm,linux,redhat,ubuntu,arch,debian,vite,vscode,vscodium,express,rust,c,cpp,cs,electron,docker,cmake,bash,&theme=light)
 
 # projects
 
